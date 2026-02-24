@@ -1,0 +1,83 @@
+/* 1600px wide*/
+.navbar {
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.inner {
+    padding: 1rem 4rem;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.routes {
+    display: flex;
+    flex: 1;
+    gap: 1rem;
+    text-decoration: none;
+    justify-content: space-between;
+}
+
+/* .contents {
+    display: flex;
+    gap: 1rem;
+    text-decoration: none;
+} */
+
+.route {
+    text-decoration: none;
+    color: rgb(24, 22, 22);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e20d08;
+}
+
+.menuButton {
+
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* Responsive design for smaller screens */
+/* 1000px wide and below */
+@media (max-width:1000px) {
+    .inner {
+        padding: 1rem 2rem;
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+
+@media (max-width:600px) {
+    .inner {
+        padding: 1rem;
+        flex: 1;
+        display: flex;
+
+    }
+
+    .innerMobile  {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
