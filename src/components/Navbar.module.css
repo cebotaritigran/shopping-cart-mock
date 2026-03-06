@@ -5,7 +5,7 @@
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -23,9 +23,19 @@
 .routes {
     display: flex;
     flex: 1;
-    gap: 1rem;
+    gap: 3rem;
     text-decoration: none;
     justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+
+    text-decoration: none;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* .contents {
@@ -40,25 +50,82 @@
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
     color: #e20d08;
+    flex: 4;
 }
 
 .menuButton {
-
+    display: flex;
     background: none;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
 }
+
+.routesMobile {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 1rem;
+    text-decoration: none;
+    justify-content: left;
+    align-items: flex-start;
+    animation-name: menuOptions;
+    animation-duration: 1.5s;
+}
+
+@keyframes menuOptions {
+    from {
+
+        opacity: 0;
+    }
+
+    to {
+
+        opacity: 1;
+    }
+}
+
+.innerMobile {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 4rem;
+}
+
+.navbarMobile {
+    animation-name: dropdDown;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+
+}
+
+
+
+@keyframes dropdDown {
+    from {
+        height: 0px;
+        opacity: 0;
+    }
+
+    to {
+        height: 180px;
+        opacity: 1;
+
+    }
+}
+
+
 
 
 /* Responsive design for smaller screens */
 /* 1000px wide and below */
 @media (max-width:1000px) {
     .inner {
-        padding: 1rem 2rem;
         flex: 1;
         display: flex;
         justify-content: space-between;
@@ -69,15 +136,16 @@
 
 @media (max-width:600px) {
     .inner {
-        padding: 1rem;
+
         flex: 1;
         display: flex;
 
     }
 
-    .innerMobile  {
+    .innerMobile {
         display: flex;
         flex-direction: column;
         gap: 1rem;
+
     }
 }
