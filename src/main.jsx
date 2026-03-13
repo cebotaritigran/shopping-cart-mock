@@ -15,16 +15,22 @@ import { CartPage } from './pages/Cart.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage></HomePage>,
-  },
-  {
-    path: "shop",
-    element: <ShopPage></ShopPage>
-  },
-  {
-    path: "cart",
-    element: <CartPage></CartPage>
-  },
+    element: <App />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />
+      },
+      {
+        path: "shop",
+        element: <ShopPage />
+      },
+      {
+        path: "cart",
+        element: <CartPage />
+      }
+    ]
+  }
 ])
 
 createRoot(document.getElementById('root')).render(
