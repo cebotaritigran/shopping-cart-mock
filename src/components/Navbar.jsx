@@ -50,7 +50,7 @@ export const Navbar = () => {
                 <div className={styles.inner}>
 
                     <div className={styles.container}>
-                        <div className={styles.logo}><i className={styles.logo}>the</i> Mock</div>
+                        <div className={styles.logo}><Link to="/" className={styles.logo}><i className={styles.logo}>the</i> Mock</Link></div>
                         {isMobile ?
                             <button className={styles.menuButton} onClick={handleMenuOpener}><Menu /></button>
                             :

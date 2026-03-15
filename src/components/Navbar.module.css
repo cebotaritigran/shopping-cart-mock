@@ -1,4 +1,7 @@
 /* 1600px wide*/
+a{
+    text-decoration: none;
+}
 .navbar {
     background-color: rgb(255, 255, 255);
     position: fixed;

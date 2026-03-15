@@ -9,7 +9,7 @@ const fetchProducts = async () => {
         }
         const result = await response.json();
         result.map((result) => {
-            result.quantity = 0;
+            result.quantity = 1;
         })
         return result
     } catch (error) {

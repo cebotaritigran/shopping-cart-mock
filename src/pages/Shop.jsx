@@ -6,20 +6,21 @@ import { useOutletContext } from "react-router"
 
 export const ShopPage = () => {
 
-    const { cart, setCart } = useOutletContext()
-    const [products, setProducts] = useState([])
+    const { cart, setCart, products, setProducts } = useOutletContext()
+    // const [products, setProducts] = useState([])
+
 
     console.log(products)
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        async function loadProducts() {
-            const productsData = await fetchProducts();
-            setProducts(productsData)
-        }
+    //     async function loadProducts() {
+    //         const productsData = await fetchProducts();
+    //         setProducts(productsData)
+    //     }
 
-        loadProducts();
-    }, []);
+    //     loadProducts();
+    // }, []);
 
     function handleAddToCart(product) {
         let idExists = cart.some((item) => {
@@ -31,7 +32,7 @@ export const ShopPage = () => {
                 if (cart.id == product.id) {
                     return {
                         ...cart,
-                        quantity: product.quantity
+                        quantity: cart.quantity + product.quantity
                     }
 
                 }
