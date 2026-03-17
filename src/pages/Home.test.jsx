@@ -6,38 +6,54 @@ import {
 } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
 import { describe, it, expect } from 'vitest'
-import { Navbar } from "./Navbar"
-import { App } from "../App";
 
-describe("Testing Navbar Component", () => {
-    it("should have logo", () => {
+
+import { HomePage } from "./Home";
+
+describe("Testing Home page", () => {
+    it("should have heading", () => {
         render(
             <MemoryRouter>
-                <Navbar />
+                <HomePage />
             </MemoryRouter>
-        );
-        expect(screen.getByText(/mock/i)).toBeInTheDocument();
 
+        );
+        expect(screen.getByText(/your essential style,/i)).toBeInTheDocument();
     })
-
-    it("should show 3 routes", () => {
+    it("should render welcome text", () => {
         render(
             <MemoryRouter>
-                <Navbar />
+                <HomePage />
             </MemoryRouter>
-        );
-        const listRoutes = screen.getAllByRole('link');
-        expect(listRoutes.length).toEqual(3);
+        )
+
+        expect(
+            screen.getByText(/welcome to/i)
+        ).toBeInTheDocument()
     })
-
-    it("should show 3 routes and they should corespond to correct routes", () => {
+    it("should render explore collection button", () => {
         render(
             <MemoryRouter>
-                <Navbar />
+                <HomePage />
             </MemoryRouter>
-        );
-        const listRoutes = screen.getAllByRole('link');
-        expect(listRoutes.length).toEqual(3);
+        )
+
+        const button = screen.getByRole("button", {
+            name: /explore the collection/i
+        })
+
+        expect(button).toBeInTheDocument()
+    })
+    it("should render tagline", () => {
+        render(
+            <MemoryRouter>
+                <HomePage />
+            </MemoryRouter>
+        )
+
+        expect(
+            screen.getByText(/discover pieces that matter/i)
+        ).toBeInTheDocument()
     })
 
 })

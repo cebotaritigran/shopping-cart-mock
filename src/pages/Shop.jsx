@@ -1,7 +1,7 @@
 import { Navbar } from "../components/Navbar"
 import styles from "./Shop.module.css"
-import fetchProducts from "../services/product"
-import { useEffect, useState } from "react"
+// import fetchProducts from "../services/product"
+// import { useEffect, useState } from "react"
 import { useOutletContext } from "react-router"
 
 export const ShopPage = () => {

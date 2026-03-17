@@ -27,7 +27,7 @@ describe("Testing Navbar Component", () => {
             </MemoryRouter>
         );
         const listRoutes = screen.getAllByRole('link');
-        expect(listRoutes.length).toEqual(3);
+        expect(listRoutes.length).toEqual(4);
     })
 
     it("should show 3 routes and they should corespond to correct routes", () => {
@@ -37,7 +37,7 @@ describe("Testing Navbar Component", () => {
             </MemoryRouter>
         );
         const listRoutes = screen.getAllByRole('link');
-        expect(listRoutes.length).toEqual(3);
+        expect(listRoutes.length).toEqual(4);
     })
 
 })

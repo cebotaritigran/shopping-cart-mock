@@ -11,27 +11,30 @@ import {
 import { HomePage } from './pages/Home.jsx';
 import { ShopPage } from './pages/Shop.jsx';
 import { CartPage } from './pages/Cart.jsx';
+import routes from './routes/routes.jsx';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        index: true,
-        element: <HomePage />
-      },
-      {
-        path: "shop",
-        element: <ShopPage />
-      },
-      {
-        path: "cart",
-        element: <CartPage />
-      }
-    ]
-  }
-])
+const router = createBrowserRouter(routes);
+
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <App />,
+//     children: [
+//       {
+//         index: true,
+//         element: <HomePage />
+//       },
+//       {
+//         path: "shop",
+//         element: <ShopPage />
+//       },
+//       {
+//         path: "cart",
+//         element: <CartPage />
+//       }
+//     ]
+//   }
+// ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

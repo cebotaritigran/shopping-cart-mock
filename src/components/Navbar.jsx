@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import styles from './Navbar.module.css'
 import { useState, useEffect } from "react";
 import { Menu } from 'lucide-react';
@@ -10,6 +10,7 @@ export const Navbar = () => {
     let navbarInner = document.querySelector(`.${styles.inner}`)
     let navbarInnerMobile = document.querySelector(`.${styles.innerMobile}`)
     let navbar = document.querySelector(`.${styles.navbar}`)
+
 
     //choose the screen size 
     const handleResize = () => {
@@ -44,6 +45,7 @@ export const Navbar = () => {
         }
     }
 
+
     return (
         <>
             <div className={styles.navbar}>
@@ -55,9 +57,32 @@ export const Navbar = () => {
                             <button className={styles.menuButton} onClick={handleMenuOpener}><Menu /></button>
                             :
                             <div className={styles.routes}>
-                                <Link to="/" className={styles.route}>Home</Link>
-                                <Link to="/shop" className={styles.route}>Shop</Link>
-                                <Link to="/cart" className={styles.route}>Cart</Link>
+                                <NavLink
+                                    to="/"
+                                    className={({ isActive }) =>
+                                        isActive ? `${styles.route} ${styles.active}` : styles.route
+                                    }
+                                >
+                                    Home
+                                </NavLink>
+
+                                <NavLink
+                                    to="/shop"
+                                    className={({ isActive }) =>
+                                        isActive ? `${styles.route} ${styles.active}` : styles.route
+                                    }
+                                >
+                                    Shop
+                                </NavLink>
+
+                                <NavLink
+                                    to="/cart"
+                                    className={({ isActive }) =>
+                                        isActive ? `${styles.route} ${styles.active}` : styles.route
+                                    }
+                                >
+                                    Cart
+                                </NavLink>
                             </div>
                         }
                         {/* {isMenuOpen ?

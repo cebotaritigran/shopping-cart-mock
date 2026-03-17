@@ -21,7 +21,7 @@ function App() {
   }, []);
 
 
-  let [totalPrice, setTotalPrice] = useState()
+  // let [totalPrice, setTotalPrice] = useState()
   return (
     <>
       <div className={styles.someDiv}>hello asd</div>

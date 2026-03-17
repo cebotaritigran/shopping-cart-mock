@@ -1,7 +1,8 @@
 /* 1600px wide*/
-a{
+a {
     text-decoration: none;
 }
+
 .navbar {
     background-color: rgb(255, 255, 255);
     position: fixed;
@@ -49,7 +50,24 @@ a{
 
 .route {
     text-decoration: none;
-    color: rgb(24, 22, 22);
+    color: rgb(86, 85, 85);
+    padding: 10px;
+    font-weight: 500;
+}
+
+.route:hover {
+
+    background-color: #ffd5d4;
+    
+    border-radius: 15px;
+}
+
+.active {
+    color: rgb(255, 28, 28);
+    font-weight: 500;
+    background-color: #ffd5d4;
+    padding: 10px;
+    border-radius: 15px;
 }
 
 .logo {

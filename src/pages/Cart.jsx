@@ -152,7 +152,7 @@ export const CartPage = () => {
                                             <button className={styles.quantityButton} onClick={() => { handleQuantityIncrement(cart.id) }}>+</button>
                                         </div>
                                         <div className={styles.cartDelete}>
-                                            <button onClick={() => { handleDeleteCartItem(cart) }}>Delete</button>
+                                            <button className={styles.deleteButton} onClick={() => { handleDeleteCartItem(cart) }}>Delete</button>
                                         </div>
                                     </div>
 
@@ -162,10 +162,10 @@ export const CartPage = () => {
                         })}
                     </div>
                     <div className={styles.cartSummaryCheckOut}>
-                        <div>Order Summary</div>
+                        <div className={styles.cartOrderTotal}>Order Summary</div>
 
-                        <div>${cartTotalPrice()}</div>
-                        <button>Proceed to Checkout</button>
+                        <div className={styles.cardTotal}>${cartTotalPrice()}</div>
+                        <button className={styles.proceedButton}>Proceed to Checkout</button>
                     </div>
                 </div>
             </div>
