@@ -3,7 +3,7 @@ import { Navbar } from "../components/Navbar"
 import styles from "./Cart.module.css"
 
 export const CartPage = () => {
-    const { cart, setCart, products, setProducts } = useOutletContext()
+    const { cart, setCart } = useOutletContext()
 
     function itemPriceTotal(item) {
         let totalPrice = item.item.price * item.quantity;

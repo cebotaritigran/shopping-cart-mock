@@ -1,16 +1,17 @@
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useOutletContext } from "react-router";
 import styles from './Navbar.module.css'
 import { useState, useEffect } from "react";
 import { Menu } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 
 export const Navbar = () => {
-
+    const { cart } = useOutletContext()
     const [isMobile, setIsMobile] = useState(false)
     const [isMenuOpen, setMenu] = useState(false)
     let navbarInner = document.querySelector(`.${styles.inner}`)
     let navbarInnerMobile = document.querySelector(`.${styles.innerMobile}`)
     let navbar = document.querySelector(`.${styles.navbar}`)
-
+    // let [cartTotal, setCartTotal] = useState(0);
 
     //choose the screen size 
     const handleResize = () => {
@@ -83,6 +84,9 @@ export const Navbar = () => {
                                 >
                                     Cart
                                 </NavLink>
+                                <div className={styles.cartTotal}>
+                                    {cart.length}
+                                </div>
                             </div>
                         }
                         {/* {isMenuOpen ?

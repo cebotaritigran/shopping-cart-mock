@@ -1,10 +1,13 @@
 .home {
     height: 100vh;
-    background-color: rgb(249, 247, 247);
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #e5e5f7 10px), repeating-linear-gradient(#ffffff55, #ffafaf);
 }
 
 .homeHeading {
@@ -129,7 +132,7 @@
     display: inline-flex;
     align-items: center;
     text-align: center;
-font-style: italic;
+    font-style: italic;
 }
 
 @media (max-width:1000px) {
